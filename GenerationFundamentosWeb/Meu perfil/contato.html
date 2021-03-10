@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<ul id="menu">
+    <li>
+        <a href="index.html">Quem sou eu?</a>
+    </li>
+    <li>
+        <a href="contato.html">Contato</a>
+    </li>
+</ul>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Entre em contato</title>
+    <link href="assets/css/style.css" rel="stylesheet" </head>
+    <style>
+        body {
+            background-image: url('https://media.giphy.com/media/LqDEIKfIm5DtvPXPrf/giphy.gif');
+            background-size: cover;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <ul>
-        <li>
-           <a href="index.html">Home</a>
-        </li> 
-        <li>
-        <a href="contato.html">Contato</a>
-        </li> 
-    </ul>
-    <h1>Entre em contato comigo</h1>
-    <form>
-        <label for="nome">Nome</label>
-        <input type="text" id="nome">
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email">
+    <h1 class="centralizar">Entre em contato comigo</h1>
 
-        <label for="assunto">Assunto</label>
-        <input type="text" id="assunto">
-    </form>
+    <div class="centralizar mb-50 helvetica">
+        <div>
+            <form>
+                <label for="nome">Nome:</label> <br>
+                <input type="text" id="nome" onkeyup='validaNome()'>
+                <div id='txtNome'></div>
+                <br>
+                <label for="email">E-mail:</label> <br>
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id='txtEmail helvetica'></div>
+                <br>
+                <label for="assunto">Assunto:</label> <br>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id='txtAssunto'></div>
+                <br>
+                <br>
+                <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
 </body>
+
 </html>
