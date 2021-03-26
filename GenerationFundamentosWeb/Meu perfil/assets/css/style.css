@@ -24,6 +24,11 @@
     align-items: center;
  }
 
+ .size {
+    width: 50px;
+    height: 50px;
+ }
+
  .centralizar{
     display: flex;
     flex-flow: row;
@@ -90,6 +95,10 @@
 
 .mt-10{
     margin-top: 10px;
+}
+
+.mt{
+   margin-top: 150px;
 }
 .coluna{
     flex-wrap: wrap row;
